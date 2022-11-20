@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { AuthProvider } from './components/Contexts/authContext';
+import { Home } from './components/Home';
+import Consultas from './components/Consultas';
+import Tiket from './components/tiket';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <AuthProvider>
+          <Routes>
+            <Route path='/consultas' element={<Consultas />}>
+            </Route>
+            <Route path='/tiket' element={<Tiket />}>
+            </Route>
+          </Routes>
+        </AuthProvider>
+      </BrowserRouter>
     </div>
   );
 }

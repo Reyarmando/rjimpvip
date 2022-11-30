@@ -12,86 +12,101 @@ const Tiket = (props) => {
             <Document>
                 <Page size='A8'>
                     <View >
-                        <Image
-                            src={Logo}
-                            alt="Logotipo"
-                            width={20}
-                            height={20} />
-
-                        <Text>RJ.IMPERIUMVIP</Text>
+                        <Text style={{
+                            fontStyle: "italic",
+                            fontSize: "10px",
+                            textAlign: "center"
+                        }}>******************************</Text>
+                        <Text style={{
+                            fontStyle: "italic",
+                            fontSize: "10px",
+                            textAlign: "center"
+                        }}>***RJ.IMPERIUMVIP***</Text>
                         <Text
                             style={{
                                 fontStyle: "italic",
-                                fontSize: "10px",
+                                fontSize: "8px",
+                                textAlign: "center"
+                            }}> BBVA: CUENTA INDEPENDENCIA BBVA
+                             Número de cuenta: 0011-0229-0200845728
+                        </Text>
+                        <Text
+                            style={{
+                                fontStyle: "italic",
+                                fontSize: "8px",
+                                textAlign: "center"
+                            }}> CCI: 011-229-000200845728-21.</Text>
+                        <Text style={{
+                            fontStyle: "italic",
+                            fontSize: "15px",
+                            textAlign: "center"
+                        }}>------------------------</Text>
+                        <Text
+                            style={{
+                                fontStyle: "italic",
+                                fontSize: "7px",
+                                textAlign: "center"
                             }}
-                        >DNI:</Text>
+                        >-DATOS DEL CLIENTE-</Text>
                         <Text
                             style={{
                                 fontStyle: "italic",
                                 fontSize: "8px",
                             }}
-                        >{props.values.dni}</Text>
-                        <Text
-                            style={{
-                                fontStyle: "italic",
-                                fontSize: "10px",
-                            }}
-                        >Nombres:</Text>
+                        >DNI           : {props.values.dni}</Text>
                         <Text
                             style={{
                                 fontStyle: "italic",
                                 fontSize: "8px",
                             }}
-                        >{props.values.fullname}</Text>
-                        <Text
-                            style={{
-                                fontStyle: "italic",
-                                fontSize: "10px",
-                            }}
-                        >Telefono:</Text>
+                        >Nombres    : {props.values.fullname}</Text>
                         <Text
                             style={{
                                 fontStyle: "italic",
                                 fontSize: "8px",
                             }}
-                        >{props.values.telefono}</Text>
-                        <Text
-                            style={{
-                                fontStyle: "italic",
-                                fontSize: "10px",
-                            }}
-                        >Direccion:</Text>
+                        >Telefono    : {props.values.telefono}</Text>
                         <Text
                             style={{
                                 fontStyle: "italic",
                                 fontSize: "8px",
                             }}
-                        >{props.values.direccion}</Text>
-                        <Text
-                            style={{
-                                fontStyle: "italic",
-                                fontSize: "10px",
-                            }}
-                        >Descripcion:</Text>
+                        >Direccion   : {props.values.direccion}</Text>
                         <Text
                             style={{
                                 fontStyle: "italic",
                                 fontSize: "8px",
                             }}
-                        >{props.values.descripcion}</Text>
-                        <Text
-                            style={{
-                                fontStyle: "italic",
-                                fontSize: "10px",
-                            }}
-                        >Monto:</Text>
+                        >Descripcion: {props.values.descripcion}</Text>
                         <Text
                             style={{
                                 fontStyle: "italic",
                                 fontSize: "8px",
                             }}
-                        >{props.values.monto}</Text>
+                        >Monto        : S/. {props.values.monto}</Text>
                     </View>
+                    <Text style={{
+                            fontStyle: "italic",
+                            fontSize: "15px",
+                            textAlign: "center"
+                        }}>------------------------</Text>
+                    <Text
+                        style={{
+                            fontStyle: "italic",
+                            fontSize: "8px",
+                            textAlign: "center"
+                        }}>CONTACTO</Text>
+                    <Text
+                        style={{
+                            fontStyle: "italic",
+                            fontSize: "8px",
+                            textAlign: "center"
+                        }}>944516860 - 977408966</Text>
+                    <Text style={{
+                        fontStyle: "italic",
+                        fontSize: "10px",
+                        textAlign: "center"
+                    }}>******************************</Text>
                 </Page>
             </Document>
         </>

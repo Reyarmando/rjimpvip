@@ -58,10 +58,10 @@ function Consultas() {
         console.log(response.status)
         const responseJSON = response.json()
         await Promise.resolve(responseJSON).then(responseJSON => setData(responseJSON))
-        
+
     }
 
-    const getName= ()=>{
+    const getName = () => {
         setValues({ ...values, fullname: data.nombres + ', ' + data.apellidoPaterno + ' ' + data.apellidoMaterno })
     }
 
@@ -83,14 +83,14 @@ function Consultas() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        
+
         addProduct(values)
         handleShow2()
         console.log('successful')
         console.log(values)
     }
 
-    const handleReload=()=>{
+    const handleReload = () => {
         window.location.reload()
     }
 
@@ -104,7 +104,7 @@ function Consultas() {
                 <Container>
 
                     <Container>
-                        <Nav defaultActiveKey="/home" as="ul">
+                        <Nav className="justify-content-center" defaultActiveKey="/home" as="ul">
                             <Nav.Item as="li">
                                 <Figure>
                                     <Figure.Image
@@ -114,6 +114,14 @@ function Consultas() {
                                         src={image}
                                     />
                                 </Figure>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <div className='col-auto p-5 m-3 align-items-center justify-content-center'>
+                                    <a href='/tablaConsultas'>
+                                        <Button variant='dark'>Ver consultas</Button>
+                                    </a>
+                                </div>
+
                             </Nav.Item>
                         </Nav>
                     </Container>
@@ -185,7 +193,7 @@ function Consultas() {
                 </Modal.Header>
                 <Modal.Body>
                     <PDFViewer style={{ width: "100%", height: "90vh" }}>
-                        <Tiket {...{ values }}/>
+                        <Tiket {...{ values }} />
                     </PDFViewer>
 
                 </Modal.Body>
